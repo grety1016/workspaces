@@ -1,0 +1,1 @@
+E:\RUST\Code\workspaces\target\release\adder.exe: E:\RUST\Code\workspaces\add_one\src\lib.rs E:\RUST\Code\workspaces\adder\src\main.rs E:\RUST\Code\workspaces\evaluate_max_num\src\lib.rs E:\RUST\Code\workspaces\lifecycle\src\lib.rs E:\RUST\Code\workspaces\struct_t\src\lib.rs

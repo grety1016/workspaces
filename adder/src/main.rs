@@ -2,6 +2,7 @@
 use add_one;
 use evaluate_max_num;
 use struct_t;
+use lifecycle;
 
 
 
@@ -15,6 +16,6 @@ fn main() {
    /////////////////////////////struct_t
    //struct_t::struct_t();
    ////////////////////////////lifecycle
-   // 
+   lifecycle::lifecycle()
    ///////////////////////////////////// 
 }
