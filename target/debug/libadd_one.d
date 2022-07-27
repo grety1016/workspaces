@@ -1,1 +1,1 @@
-E:\RUST\rust\workspaces\target\debug\libadd_one.rlib: E:\RUST\rust\workspaces\add_one\src\lib.rs
+E:\RUST\Code\workspaces\target\debug\libadd_one.rlib: E:\RUST\Code\workspaces\add_one\src\lib.rs

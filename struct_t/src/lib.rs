@@ -3,6 +3,7 @@
 //#![allow(non_camel_case_types)]
 
 use std::clone;
+use core::fmt::Debug;
 
 #[derive(Debug)]
 pub struct Point<T> {
@@ -48,6 +49,7 @@ pub trait GetInformation {
     fn get_age(&self) -> u32;
 }
 
+
 impl GetInformation for Student {
     fn get_name(&self) -> &str {
         &self.name
@@ -57,7 +59,7 @@ impl GetInformation for Student {
         self.age
     }
 }
-
+ 
 impl GetInformation for Teacher {
     fn get_name(&self) -> &str {
         &self.name
@@ -67,11 +69,23 @@ impl GetInformation for Teacher {
         self.age
     }
 }
+ 
+fn print_trait<T>(item: T)
+where T: GetInformation
+{
+    println!("the name is:{} is from print_trait", item.get_name());
+    println!("the age is:{} is from print_trait", item.get_age());
+}
 
-
-fn print_trait(item:impl GetInformation){
-    println!("the name is:{} is from print_trait",item.get_name());
-    println!("the age is:{} is from print_trait",item.get_age());
+fn produce_item_trait() -> impl GetInformation + Debug
+{
+    Student {
+        name: "suninglv".to_string(),
+        age: 18,
+        sex: "男".to_string(),
+        phone: "15345923407".to_string(),
+        address: "同安区洪塘镇".to_string(),
+    }
 }
 
 pub fn struct_t() {
@@ -111,9 +125,6 @@ pub fn struct_t() {
     println!("t is :{},{}", t.get_name(), t.get_age().to_string());
     print_trait(s);
     print_trait(t);
-    
-  
-    
-
-
+    let st = produce_item_trait();
+    println!("st' name is:{:#?}", st);
 }
