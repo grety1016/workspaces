@@ -12,11 +12,16 @@ version = "0.1.0"
 dependencies = [
  "add_one",
  "evaluate_max_num",
+ "lifecycle",
  "struct_t",
 ]
 
 [[package]]
 name = "evaluate_max_num"
+version = "0.1.0"
+
+[[package]]
+name = "lifecycle"
 version = "0.1.0"
 
 [[package]]

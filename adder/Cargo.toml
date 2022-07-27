@@ -9,3 +9,4 @@ edition = "2021"
 add_one = {path="../add_one"}
 evaluate_max_num = {path="../evaluate_max_num"}
 struct_t = {path="../struct_t"}
+lifecycle = {path="../lifecycle"}
