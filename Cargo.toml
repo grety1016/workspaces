@@ -1,0 +1,7 @@
+[workspace]
+members=[
+    "adder",
+    "add_one",
+    "evaluate_max_num",
+    "struct_t"
+]
