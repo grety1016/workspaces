@@ -11,10 +11,15 @@ name = "adder"
 version = "0.1.0"
 dependencies = [
  "add_one",
+ "closure",
  "evaluate_max_num",
  "lifecycle",
  "struct_t",
 ]
+
+[[package]]
+name = "closure"
+version = "0.1.0"
 
 [[package]]
 name = "evaluate_max_num"

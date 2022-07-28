@@ -4,5 +4,6 @@ members=[
     "add_one",
     "evaluate_max_num",
     "struct_t",
-    "lifecycle"
+    "lifecycle",
+    "closure"
 ]
