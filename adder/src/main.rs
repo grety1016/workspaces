@@ -1,9 +1,11 @@
 #![allow(unused)]
+#![allow(dead_code)]
 use add_one;
 use evaluate_max_num;
 use struct_t;
 use lifecycle;
 use closure;
+use smart_point;
 
 
 
@@ -20,6 +22,9 @@ fn main() {
    //lifecycle::lifecycle()
    ///////////////////////////////////// 
    ////////////////////////////closure
-   closure::closure();
+   //closure::closure();
+   /////////////////////////////////////  
+   ///////////////////////////////smart_point
+   smart_point::smart_point();
    ///////////////////////////////////// 
 }

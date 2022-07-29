@@ -14,6 +14,7 @@ dependencies = [
  "closure",
  "evaluate_max_num",
  "lifecycle",
+ "smart_point",
  "struct_t",
 ]
 
@@ -27,6 +28,10 @@ version = "0.1.0"
 
 [[package]]
 name = "lifecycle"
+version = "0.1.0"
+
+[[package]]
+name = "smart_point"
 version = "0.1.0"
 
 [[package]]

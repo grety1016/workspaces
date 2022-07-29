@@ -7,7 +7,8 @@ edition = "2021"
 
 [dependencies]
 add_one = {path="../add_one"}
-evaluate_max_num = {path="../evaluate_max_num"}
+evaluate_max_num={path = "../evaluate_max_num"}
 struct_t = {path="../struct_t"}
 lifecycle = {path="../lifecycle"}
 closure = {path="../closure"}
+smart_point = {path="../smart_point"}
