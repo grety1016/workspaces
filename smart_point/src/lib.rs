@@ -49,6 +49,7 @@ pub fn smart_point(){
         // s1.name = "jkjkjk".to_string();
     }
     let x = "rust".to_string();
+    let t = "rust".to_string();
     let y = MyBox::new(x);
     hello(&y);
 
