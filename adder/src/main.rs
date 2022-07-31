@@ -1,3 +1,9 @@
+//! MyCrate
+//! 
+//! my_crate is main
+//! 
+
+
 #![allow(unused)]
 #![allow(dead_code)]
 use add_one;

@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["struct_t",""]],"struct":[["Point","定义结构及枚举类型"],["Point2",""]],"trait":[["GetInformation","定义trait GetInformation"]]});

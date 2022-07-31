@@ -1,0 +1,10 @@
+var searchIndex = JSON.parse('{\
+"add_one":{"doc":"","t":[5],"n":["push_one"],"q":["add_one"],"d":[""],"i":[0],"f":[[[]]],"p":[]},\
+"adder":{"doc":"MyCrate","t":[5],"n":["main"],"q":["adder"],"d":[""],"i":[0],"f":[[[]]],"p":[]},\
+"closure":{"doc":"","t":[5],"n":["closure"],"q":["closure"],"d":[""],"i":[0],"f":[[[]]],"p":[]},\
+"evaluate_max_num":{"doc":"","t":[5,5,5,5],"n":["do_thing","lagest_char","lagest_i32","lagest_t"],"q":["evaluate_max_num","","",""],"d":["","","",""],"i":[0,0,0,0],"f":[[[]],[[],["char",0]],[[],["i32",0]],[[]]],"p":[]},\
+"lifecycle":{"doc":"","t":[5],"n":["lifecycle"],"q":["lifecycle"],"d":[""],"i":[0],"f":[[[]]],"p":[]},\
+"smart_point":{"doc":"SmartPoint","t":[5],"n":["smart_point"],"q":["smart_point"],"d":["this is title"],"i":[0],"f":[[[]]],"p":[]},\
+"struct_t":{"doc":"","t":[8,3,3,11,11,11,11,11,11,11,11,10,10,11,11,5,11,11,11,11,11,11],"n":["GetInformation","Point","Point2","borrow","borrow","borrow_mut","borrow_mut","fmt","fmt","from","from","get_age","get_name","into","into","struct_t","try_from","try_from","try_into","try_into","type_id","type_id"],"q":["struct_t","","","","","","","","","","","","","","","","","","","","",""],"d":["定义trait GetInformation","定义结构及枚举类型","","","","","","","","Returns the argument unchanged.","Returns the argument unchanged.","","","Calls <code>U::from(self)</code>.","Calls <code>U::from(self)</code>.","","","","","","",""],"i":[0,0,0,1,2,1,2,1,2,1,2,3,3,1,2,0,1,2,1,2,1,2],"f":[null,null,null,[[["",0]],["",0]],[[["",0]],["",0]],[[["",0]],["",0]],[[["",0]],["",0]],[[["",0],["formatter",3]],["result",6]],[[["",0],["formatter",3]],["result",6]],[[]],[[]],[[["",0]],["u32",0]],[[["",0]],["str",0]],[[]],[[]],[[]],[[],["result",4]],[[],["result",4]],[[],["result",4]],[[],["result",4]],[[["",0]],["typeid",3]],[[["",0]],["typeid",3]]],"p":[[3,"Point"],[3,"Point2"],[8,"GetInformation"]]}\
+}');
+if (window.initSearch) {window.initSearch(searchIndex)};

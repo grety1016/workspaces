@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["smart_point","this is title"]]});
