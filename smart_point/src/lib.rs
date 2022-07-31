@@ -1,3 +1,8 @@
+//! SmartPoint
+//! 
+//!     这是第二行
+
+
 #![allow(unused)]
 #![allow(dead_code)]
 use std::ops::Deref;
@@ -25,6 +30,27 @@ impl<T> MyBox<T>{
 }
 
 
+/// # this is title
+/// ## secend title
+/// &emsp;&emsp;this is all part
+///> hello
+///>> workd 
+///>>> hello
+///>> heihei
+/// _____________
+/// 1. jkjk
+/// 2. jkjk
+/// * jkjkjk
+/// # jkjkjk
+/// [百度](https:www.baidu.com)
+/// ```
+/// let x = 5;
+/// println!("x is {}",x);
+/// 
+/// ```
+///     let x = t;    
+/// 
+/// 
 
 
 pub fn smart_point(){
@@ -48,10 +74,14 @@ pub fn smart_point(){
         // let mut s1 = Box::new(s);
         // s1.name = "jkjkjk".to_string();
     }
-    let x = "rust".to_string();
-    let t = "rust".to_string();
-    let y = MyBox::new(x);
-    hello(&y);
+    
+    {
+        // let x = "rust".to_string();
+        // let t = "rust".to_string();
+        // let y = MyBox::new(x);
+        // hello(&y);
+    }
+
 
 }
 fn hello(x:&str){
