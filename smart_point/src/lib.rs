@@ -5,6 +5,7 @@
 
 #![allow(unused)]
 #![allow(dead_code)]
+use std::cell::RefCell;
 use std::ops::Deref;
 use std::rc::Rc;
 /// # this is title
@@ -81,6 +82,10 @@ enum List2{
     Nil,
 }
 
+enum List3{
+    Cons(Rc<RefCell<i32>>,Rc<List3>),
+    Nil,
+}
 
 
 pub fn smart_point(){
@@ -142,8 +147,17 @@ pub fn smart_point(){
 
 
     }
+//使用Rc::Refcell
+    {
+        use List3::{Cons,Nil};
+        use std::rc::Rc;
+        use std::cell::RefCell;
 
-    
+        let value = Rc::new(RefCell::new(5));
+
+        let a = Rc::new(Cons(Rc::clone(&value), Rc::new(Nil)));
+
+    }    
 
 
 }
