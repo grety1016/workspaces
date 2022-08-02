@@ -5,9 +5,11 @@
 
 #![allow(unused)]
 #![allow(dead_code)]
+use std::borrow::Borrow;
 use std::cell::RefCell;
 use std::ops::Deref;
-use std::rc::Rc;
+use std::option;
+use std::rc::{Rc,Weak};
 /// # this is title
 /// ## secend title
 /// &emsp;&emsp;this is all part
@@ -81,10 +83,35 @@ enum List2{
     Cons(i32,Rc<List2>),
     Nil,
 }
-
+#[derive(Debug)]
 enum List3{
     Cons(Rc<RefCell<i32>>,Rc<List3>),
     Nil,
+}
+#[derive(Debug)]
+enum List4{
+    Cons(i32,RefCell<Rc<List4>>),
+    Nil,
+}
+
+
+use List4::{Cons,Nil};
+impl List4{    
+    fn tail(&self) -> Option<&RefCell<Rc<List4>>>{
+        match self {
+            Cons(_,item) => Some(item),
+            Nil => None,
+        }
+
+    }
+}
+
+
+#[derive(Debug)]
+struct Node{
+    value:i32,
+    parent:RefCell<Weak<Node>>,
+    children:RefCell<Vec<Rc<Node>>>,
 }
 
 
@@ -149,15 +176,57 @@ pub fn smart_point(){
     }
 //使用Rc::Refcell
     {
-        use List3::{Cons,Nil};
-        use std::rc::Rc;
-        use std::cell::RefCell;
+        // use List3::{Cons,Nil};
+        // use std::rc::Rc;
+        // use std::cell::RefCell;
 
-        let value = Rc::new(RefCell::new(5));
+        // let value = Rc::new(RefCell::new(5));
 
-        let a = Rc::new(Cons(Rc::clone(&value), Rc::new(Nil)));
+        // let a = Rc::new(Cons(Rc::clone(&value), Rc::new(Nil))); 
+        // *value.borrow_mut() += 5;
+        // println!("{:?}",&a);
 
     }    
+//循环列表(出现死循环)
+{
+    // use std::rc::Rc;
+    // use std::cell::RefCell;
+    // use List4::{Cons,Nil};
+
+    // let a = Rc::new(Cons(5,RefCell::new(Rc::new(Nil))));
+    // println!("1, a rc count = {}",Rc::strong_count(&a));
+    // println!("1, a tail = {:?}",a.tail());
+
+    // let b = Rc::new(Cons(10,RefCell::new(Rc::clone(&a))));
+    // println!("2, a rc count = {}",Rc::strong_count(&a));
+    // println!("2, b rc count = {}",Rc::strong_count(&b));
+    // println!("1, b tail = {:?}",b.tail());
+
+    // if let Some(link) = a.tail(){
+    //     *link.borrow_mut() = b.clone();
+    // }
+    // println!("2, a rc count = {}",Rc::strong_count(&a));
+    // println!("2, b rc count = {}",Rc::strong_count(&b));
+    //println!("1, a tail = {:?}",a.tail()); ////此代码造成死循环
+    
+}
+
+{
+    // let leaf = Rc::new(Node{value:3,parent:RefCell::new(Weak::new()),children:RefCell::new(vec![]),});
+    // println!("leaf's parent is :{:?}",leaf.parent.borrow().upgrade());
+    // println!("leaf's children is :{:?}",leaf.children.borrow());
+    // let branch = Rc::new(Node{value:5,parent:RefCell::new(Weak::new()),children:RefCell::new(vec![Rc::clone(&leaf)]),});
+
+    // *leaf.parent.borrow_mut() = Rc::downgrade(&branch);
+    // println!("leaf's parent is :{:?}",leaf.parent.borrow().upgrade());
+    // println!("leaf's children is :{:?}",leaf.children.borrow());
+
+    // println!("branch's parent is :{:?}",branch.parent.borrow().upgrade());
+    // println!("branch's children is :{:?}",branch.children.borrow());
+
+
+
+}
 
 
 }
