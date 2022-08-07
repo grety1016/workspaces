@@ -6,5 +6,9 @@ members=[
     "struct_t",
     "lifecycle",
     "closure",
-    "smart_point"
+    "smart_point",
+    "thread_demo",
+    "trait_demo",
+    "async_demo"
 ]
+

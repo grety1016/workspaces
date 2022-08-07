@@ -48,13 +48,13 @@ struct Teacher {
 }
 
 ///定义trait GetInformation
-pub trait GetInformation {
+pub trait GetInformation:Debug {
     fn get_name(&self) -> &str;
     fn get_age(&self) -> u32;
 }
 
 ///为学生及老师的类实现GetInformation
-impl GetInformation for Student {
+impl GetInformation  for Student {
     fn get_name(&self) -> &str {
         &self.name
     }
@@ -63,6 +63,7 @@ impl GetInformation for Student {
         self.age
     }
 }
+
 
 impl GetInformation for Teacher {
     fn get_name(&self) -> &str {
@@ -165,7 +166,7 @@ pub fn struct_t() {
     // print!("the Point s1 is: {:#?}",s1);
 
     // let s2 = Point{x:32.09,y:64.89};
-    // print!("the Point s2 is: {:#?}",s2);
+     //print!("the Point s2 is: {:#?}",s2);
 
     // let s3 = Point2{x:32.09,y:'c'};
     // print!("the Point s2 is: {:#?}",s3);
@@ -198,8 +199,8 @@ pub fn struct_t() {
     // print_trait(s);
     // print_trait(t);
     // //返回实现Trait的类型
-    // let st = produce_item_trait();
-    // println!("st' name is:{:#?}", st);
+    let st = produce_item_trait();
+     println!("st' name is:{:#?}", st);
     //有条件实现方法，该方法必须实现特定Trait
     // let t = Teacher{
     //     name:"xiaowang".to_string(),

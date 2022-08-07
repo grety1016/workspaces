@@ -12,3 +12,6 @@ struct_t = {path="../struct_t"}
 lifecycle = {path="../lifecycle"}
 closure = {path="../closure"}
 smart_point = {path="../smart_point"}
+thread_demo = {path="../thread_demo"}
+trait_demo = {path="../trait_demo"}
+async_demo = {path="../async_demo"}
