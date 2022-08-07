@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["push_one",""]]});
+window.SIDEBAR_ITEMS = {"fn":[["push_one",""]]};

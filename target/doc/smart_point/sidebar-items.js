@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["smart_point","this is title"]]});
+window.SIDEBAR_ITEMS = {"fn":[["smart_point",""]]};

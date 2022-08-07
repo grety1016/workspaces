@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["lifecycle",""]]});
+window.SIDEBAR_ITEMS = {"fn":[["lifecycle",""]]};

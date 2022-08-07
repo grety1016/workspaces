@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["do_thing",""],["lagest_char",""],["lagest_i32",""],["lagest_t",""]]});
+window.SIDEBAR_ITEMS = {"fn":[["do_thing",""],["lagest_char",""],["lagest_i32",""],["lagest_t",""]]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["trait_demo",""]],"trait":[["A",""],["B",""]]};

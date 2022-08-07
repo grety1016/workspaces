@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["closure",""]]});
+window.SIDEBAR_ITEMS = {"fn":[["closure",""]]};
